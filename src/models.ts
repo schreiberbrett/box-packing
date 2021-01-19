@@ -40,7 +40,6 @@ function lookupColor(id: number): string {
         'magenta',
         'grey',
         'pink',
-        'apricot',
         'beige',
         'mint',
         'lavender'

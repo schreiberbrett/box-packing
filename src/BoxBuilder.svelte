@@ -15,8 +15,6 @@ export let id = 1
 
 export let box = empty()
 
-export let mode: 'Add' | 'Update' = 'Add'
-
 function occupy(i: number, j: number): void {
     box.squares[i][j] = id
 }
@@ -213,7 +211,7 @@ function lastRowEmpty() {
         occupy(box.width - 1, box.height - 1)
     }}></button>
 
-    <button class="submit" on:click={submit}>{mode}</button>
+    <button class="submit" on:click={submit}>Add</button>
     <button on:click={_ => clear()}>Clear</button>
 </section>
 

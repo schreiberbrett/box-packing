@@ -13,6 +13,14 @@ export function Just<T>(value: T): Maybe<T> {
     return {kind: 'Just', value}
 }
 
+export function map<A, B>(maybe: Maybe<A>, f: (a: A) => B): Maybe<B> {
+    if (maybe.kind === 'Nothing') {
+        return Nothing()
+    }
+
+    return Just(f(maybe.value))
+}
+
 export function justs<T>(xs: Maybe<T>[]): T[] {
     let result: T[] = []
     for (let x of xs) {
@@ -86,6 +94,15 @@ export function flatMap<A, B>(as: A[], f: (a: A) => B[]): B[] {
     let result: B[] = []
     for (let a of as) {
         result.push(...f(a))
+    }
+
+    return result
+}
+
+export function sumBy<T>(xs: T[], f: (x: T) => number): number {
+    let result = 0
+    for (let x of xs) {
+        result += f(x)
     }
 
     return result

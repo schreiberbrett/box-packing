@@ -1,1 +1,3 @@
-section.svelte-v9ytl5{display:grid}section.svelte-llkym6{display:grid}.square.svelte-llkym6{height:100%;width:100%}.submit.svelte-llkym6{grid-column-start:1;grid-column-end:-2;grid-row-start:-2;grid-row-end:-1}
+main.svelte-1tpzhu1{display:grid;grid-template-areas:"box-builder box-builder"
+			"solve       solve"
+			"box-list    result";justify-items:center}button.svelte-1tpzhu1{grid-area:solve}#box-builder.svelte-1tpzhu1{grid-area:box-builder}#box-list.svelte-1tpzhu1{grid-area:box-list}#result.svelte-1tpzhu1{grid-area:result}section.svelte-llkym6{display:grid}.square.svelte-llkym6{height:100%;width:100%}.submit.svelte-llkym6{grid-column-start:1;grid-column-end:-2;grid-row-start:-2;grid-row-end:-1}section.svelte-v9ytl5{display:grid}
